@@ -165,9 +165,9 @@ public:
             int tmp=0;
             for(int bit=1;bit<10;++bit){
                 res[i]=bit;
-                if(res==*this)
+                if(res*res==*this)
                     return res;
-                else if(*this<res)
+                else if(*this<res*res)
                     break;
                 tmp=bit;
             }
@@ -192,7 +192,7 @@ int main(){
     cin>>n_str>>m_str;
     Int n(n_str);
     Int m(m_str);
-    cout<<n.floor_sqrt()<<" "<<m.floor_sqrt()<<endl;
+   // cout<<n.floor_sqrt()<<" "<<m.floor_sqrt()<<endl;
     cout<<n.floor_sqrt()*m.floor_sqrt();
     
     return 0;
